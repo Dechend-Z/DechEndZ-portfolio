@@ -1,0 +1,163 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: none;
+    /* Hide default cursor to use custom one */
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #0a0a0a;
+    /* Dark premium background */
+    color: #ffffff;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Custom Cursor */
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+}
+
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+/* Background Canvas */
+canvas#gravityCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Main Container */
+#container {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    z-index: 10;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Hero & Brand */
+.brand {
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #fff 0%, #a5a5a5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #888;
+    font-weight: 300;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* Links Row */
+.links-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: relative;
+    padding: 10px 20px;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #ccc;
+}
+
+/* Footer */
+.simple-footer {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        margin-top: 20px;
+    }
+
+    to {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .brand {
+        font-size: 3.5rem;
+    }
+
+    .links-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

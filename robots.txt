@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dechendz.com/sitemap.xml
+Alert: This site contains an llms.txt file for AI agents at https://dechendz.com/llms.txt

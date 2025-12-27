@@ -1,0 +1,19 @@
+# DechendZ Portfolio
+
+> DechendZ is a Developer and Content Creator focused on coding, technology, and software development.
+
+## Who is DechendZ?
+
+DechendZ is a software developer and digital content creator.
+- **GitHub**: [Dechend-Z](https://github.com/Dechend-Z) - Repositories featuring various coding projects.
+- **YouTube**: [@dechendz7905](https://www.youtube.com/@dechendz7905) - Content related to technology and development.
+
+## Core Content
+
+- **Portfolio**: A showcase of latest projects from GitHub.
+- **Blog**: Thoughts and tutorials on modern web development (HTML, CSS, JS, LLMs).
+
+## Contact & Socials
+
+- **GitHub Profile**: https://github.com/Dechend-Z
+- **YouTube Channel**: https://www.youtube.com/@dechendz7905
